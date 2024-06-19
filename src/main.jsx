@@ -10,6 +10,9 @@ import Dashboard from './components/dashboard.jsx'
 import AuthenticatedLayout from './components/userLayout.jsx'
 import AttendanceForm from './components/attendanceForm.jsx'
 import Profile from './components/profile'
+import { ManageFaculty } from './components/admin/manageFaculty'
+import { ManageStudents } from './components/admin/manageStudent'
+
 // import AttendanceViewer from './components/attendance'
 const router = createBrowserRouter(createRoutesFromElements(
   <>
@@ -21,6 +24,13 @@ const router = createBrowserRouter(createRoutesFromElements(
    <Route path="/user/dashboard" element={<Dashboard />} />
    <Route path="/user/attendance" element={<AttendanceForm />} />
    <Route path="/user/profile" element={<Profile />} />
+ </Route>
+ <Route path ="/admin" element={<AuthenticatedLayout />}>
+   <Route path="/admin/dashboard" element={<Dashboard />} />
+   <Route path="/admin/manageStudent" element={<ManageStudents />}/>
+   <Route path="/admin/manageFaculty" element={<ManageFaculty />} />
+   <Route path="/admin/manageClass" element={<ManageClass />} />
+   <Route path="/admin/profile" element={<Profile />} />
  </Route>
  </>
 ))
