@@ -11,6 +11,11 @@ import AuthenticatedLayout from './components/userLayout.jsx'
 import AttendanceForm from './components/attendanceForm.jsx'
 import Profile from './components/profile'
 import AttendanceViewer from './components/attendance'
+import { ManageStudents } from './components/admin/manageStudent'
+import { ManageFaculty } from './components/admin/manageFaculty'
+import ManageClass from './components/admin/manageClass'
+import AdminLayout from './components/admin/adminLayout'
+
 const router = createBrowserRouter(createRoutesFromElements(
   <>
   <Route path="/" element={<Layout />}>
@@ -22,6 +27,13 @@ const router = createBrowserRouter(createRoutesFromElements(
    <Route path="/user/attendance" element={<AttendanceForm />} />
    <Route path="/user/profile" element={<Profile />} />
    <Route path="/user/report" element={<AttendanceViewer />} />
+ </Route>
+ <Route path ="/admin" element={<AdminLayout />}>
+   <Route path="/admin/dashboard" element={<Dashboard />} />
+   <Route path="/admin/manageStudent" element={<ManageStudents />}/>
+   <Route path="/admin/manageFaculty" element={<ManageFaculty />} />
+   <Route path="/admin/manageClass" element={<ManageClass />} />
+   <Route path="/admin/profile" element={<Profile />} />
  </Route>
  </>
 ))
