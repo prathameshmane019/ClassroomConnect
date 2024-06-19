@@ -6,12 +6,15 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 
 const students = [
-  { id: 1, name: 'John Doe' },
+  { id: 1, name: 'Aishwarya Deshmukh' },
   { id: 2, name: 'Jane Smith' },
   { id: 3, name: 'Alice Johnson' },
-  // Add more students as needed
+  { id: 4, name: 'John Doe' },
+  { id: 5, name: 'Prathamesh Mane' },
+  { id: 6, name: 'Suraj Masa;' },
 ];
 
+console.table(students)
 const AttendanceForm = () => {
   const [attendance, setAttendance] = useState({});
 

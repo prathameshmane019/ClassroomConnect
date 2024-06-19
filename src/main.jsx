@@ -10,7 +10,7 @@ import Dashboard from './components/dashboard.jsx'
 import AuthenticatedLayout from './components/userLayout.jsx'
 import AttendanceForm from './components/attendanceForm.jsx'
 import Profile from './components/profile'
-// import AttendanceViewer from './components/attendance'
+import AttendanceViewer from './components/attendance'
 const router = createBrowserRouter(createRoutesFromElements(
   <>
   <Route path="/" element={<Layout />}>
@@ -21,6 +21,7 @@ const router = createBrowserRouter(createRoutesFromElements(
    <Route path="/user/dashboard" element={<Dashboard />} />
    <Route path="/user/attendance" element={<AttendanceForm />} />
    <Route path="/user/profile" element={<Profile />} />
+   <Route path="/user/report" element={<AttendanceViewer />} />
  </Route>
  </>
 ))

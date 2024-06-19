@@ -1,4 +1,3 @@
-// src/components/Profile.jsx
 
 import React from 'react';
 
